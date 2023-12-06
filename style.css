@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    height: 100vh;
+    border: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#mainGridContainer {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 1fr 4.5fr;
+    grid-template-columns: 1fr 5fr;
+}
+
+#header {
+    background-color: #FFFFFF;
+    grid-row: 1;
+    grid-column: 2 / span 2;
+    display: grid;
+    height: 100%;
+    row-gap: 10px;
+    column-gap: 300px;
+    box-shadow: 0px 5px 15px gray;
+    z-index: 2;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    padding-top: 1rem;
+}
+
+.searchContainer {
+    display: flex;
+    grid-row: 1;
+    grid-column: 1;
+    height: 20%;
+    gap: .5rem;
+}
+
+.searchIcon {
+    background-image: url(images/magnify.svg);
+    background-repeat: no-repeat;
+    flex-grow: 1;
+    height: 2rem;
+
+}
+
+input {
+    width: 120%;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: lightgray;
+    background-color: lightgrey;
+}
+
+.searchBar {
+    flex-grow: 10;
+}
+
+.notifContainer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1.5rem;
+    grid-row: 1;
+    grid-column: 2;
+    height: 38%;
+}
+
+.notifIcon {
+    background-image: url(images/bell-ring.svg);
+    background-repeat: no-repeat;
+    height: 1.3rem;
+    flex-grow: 1;
+    max-width: 3%;
+}
+
+.userProfilePic {
+    flex-grow: 1;
+    max-width: 5%;
+}
+
+.userProfilePic>img {
+    max-width: 100%;
+    border-radius: 30px;
+}
+
+.username {
+    flex-grow: 0;
+    font-weight: bolder;
+}
+
+.welcomeContainer {
+    display: flex;
+    gap: 2rem;
+    grid-row: 2;
+    grid-column: 1;
+    height: 50%;
+    align-items: center;
+}
+
+.userProfilePicWelcome {
+    width: 10%;
+}
+
+.userProfilePicWelcome>img {
+    height: 4rem;
+    border-radius: 30px;
+}
+
+.welcomeMessagesContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+    font-weight: bold;
+}
+
+.welcomeMessage {
+    height: 100%;
+    font-size: .8rem;
+}
+
+.welcomeUsername {
+    height: 100%;
+    font-size: 1.5rem;
+}
+
+.navButtonsContainer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.navButtonsContainer>button {
+    border-radius: 20px;
+    border-style: none;
+    background-color: #1992D4;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    height: 45%;
+    width: 12%;
+}
+
+#sidebar {
+    background-color: #1992D4;
+    color: #FFFFFF;
+    grid-row: 1 / span 2;
+    grid-column: 1;
+}
+
+.sidebarContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.logoContainer {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-left: 2rem;
+    padding-top: 1rem;
+}
+
+.logoContainer>img {
+    height: 3rem;
+}
+
+.logoLetters {
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
+
+#sidebar>.sidebarContainer>.Menu1Container>ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.Menu1Container>ul>li {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.Menu1Container>ul>li>img {
+    height: 1.2rem;
+}
+
+.Menu2Container>ul>li {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.Menu2Container>ul>li>img {
+    height: 1.2rem;
+}
+
+#sidebar>.sidebarContainer>.Menu2Container>ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+#article {
+    background-color: #E1E7EF;
+    grid-row: 2;
+    grid-column: 2;
+    padding-top: 22px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+}
+
+.articleItemsContainer {
+    display: flex;
+    height: 100%;
+    gap: 10px;
+}
+
+.articleProjects {
+    display: grid;
+    height: 100%;
+    width: 80%;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.articleProjects > h2 {
+        font-size: 1.4rem;
+        height: 1.4rem;
+        grid-column: 1 /-1;
+        grid-row: 1 /-1;
+        margin-bottom: -2rem;
+
+}
+
+.articleProjects>.projects {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 5px 7px gray;
+}
+
+.articleProjects:nth-child(1) {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.articleProjects:nth-child(2) {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.articleProjects:nth-child(3) {
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.articleProjects:nth-child(4) {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.articleProjects:nth-child(5) {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.articleProjects:nth-child(6) {
+    grid-row: 3;
+    grid-column: 2;
+}
+.projects {
+    display: grid;
+    grid-template-columns: 1rem 1fr;
+}
+.color-block {
+    grid-row: 1 / span 3;
+    background: #1992D4;
+    border-radius: 20px 0 0 20px;
+    width: 60%;
+}
+.text-block > .project-name {
+    margin-bottom: 0;
+}
+.text-block > p {
+    font-size: .9rem;
+    color: gray;
+    margin-top: 0;
+}
+.action-block {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-right: 1rem;
+}
+.actionIcon {
+    height: 2rem;
+}
+.articleSidebar {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    gap: 60px;
+}
+
+.announcementsContainer {
+    padding-top: 2.4rem;
+}
+
+.announcements {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem 2rem;
+    flex-grow: 1;
+    border-radius: 10px;
+    box-shadow: 0px 5px 7px gray;
+
+}
+.announcementLine {
+    width: 100%;
+  height: 1px;
+  background-color: lightgray;
+}
+.announcementTextBlock > h4 {
+    font-weight: bolder;
+    font-size: .9rem;
+    margin-bottom: 0;
+}
+.announcementTextBlock > p {
+    font-weight: lighter;
+    font-size: .7rem;
+    margin-top: 0;
+    color: gray;
+}
+.trendingContainer {
+    display: flex;
+    flex-direction: column;
+}
+.trending {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    gap: 1.5rem;
+    box-shadow: 0px 5px 7px gray;
+    background-color: #FFFFFF;
+    flex-grow: 1;
+
+}
+.usersContainer {
+    display: flex;
+    gap: .5rem;
+}
+.recommendedUserpfp {
+    height: 2rem;
+    border-radius: 30px;
+}
+.recommendedUserInfo {
+    display: flex;
+    flex-direction: column;
+}
+.userHandle {
+    font-size: .9rem;
+    font-weight: bolder;
+}
+.recommendedProject {
+    font-size: .9rem;
+    font-weight: lighter;
+    color: gray;
+}
